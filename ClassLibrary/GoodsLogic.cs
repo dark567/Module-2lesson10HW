@@ -27,7 +27,7 @@ namespace ClassLibrary
             Goods._modelGoods.RemoveAt(_index);
         }
 
-        public DateTime CalcLimitExpirationDate(double _expirationDate, DateTime DateAddGoodsToStorePlace)
+        public static DateTime CalcLimitExpirationDate(double _expirationDate, DateTime DateAddGoodsToStorePlace)
         {
             return DateAddGoodsToStorePlace.AddDays(_expirationDate);
         }

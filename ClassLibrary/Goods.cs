@@ -10,8 +10,8 @@ namespace ClassLibrary
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public decimal Price { get; set; }
-        public double ExpirationDate { get; set; }
+        public double Price { get; set; }
+        public double ExpirationCountDays { get; set; }
         public DateTime DateAddGoodsToStorePlace { get; set; }
 
         public static List<Goods> _modelGoods;
@@ -27,13 +27,13 @@ namespace ClassLibrary
         /// <param name="_name"></param>
         /// <param name="_price"></param>
         /// <param name="_expirationDate"></param>
-        public Goods(string _name, decimal _price, int _expirationDate)
+        public Goods(string _name, double _price, int _expirationCountDays)
         {
-            this.Id = new Guid();
+            this.Id = Guid.NewGuid();
             this.Name = _name;
             this.Price = _price;
-            this.ExpirationDate = _expirationDate;
-            this.DateAddGoodsToStorePlace = DateTime.Now;
+            this.ExpirationCountDays = _expirationCountDays;
+            this.DateAddGoodsToStorePlace = DateTime.Now.Date;
         }
 
     }
