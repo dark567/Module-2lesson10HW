@@ -8,7 +8,9 @@ namespace ClassLibrary
 {
     public class GoodsLogic
     {
-
+        /// <summary>
+        /// List all goods
+        /// </summary>
         public static Goods[] GetGoods
         {
             get
@@ -17,16 +19,30 @@ namespace ClassLibrary
             }
         }
 
+        /// <summary>
+        /// add new goods
+        /// </summary>
+        /// <param name="_modelgoods">new item array goods</param>
         public static void AddGoods(Goods _modelgoods)
         {
             Goods._modelGoods.Add(_modelgoods);
         }
 
+        /// <summary>
+        /// del items array
+        /// </summary>
+        /// <param name="_index">index array</param>
         public static void RemoveGoods(int _index)
         {
             Goods._modelGoods.RemoveAt(_index);
         }
 
+        /// <summary>
+        /// метод эмулятор просрочки – по указанной дате поставки И КОЛИЧЕЧЕСТВО ДНЕЙ возвращает дату просрочки
+        /// </summary>
+        /// <param name="_expirationDate">count days expiration</param>
+        /// <param name="DateAddGoodsToStorePlace">date limit</param>
+        /// <returns></returns>
         public static DateTime CalcLimitExpirationDate(double _expirationDate, DateTime DateAddGoodsToStorePlace)
         {
             return DateAddGoodsToStorePlace.AddDays(_expirationDate);

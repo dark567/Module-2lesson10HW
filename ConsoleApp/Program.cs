@@ -10,6 +10,9 @@ namespace ConsoleApp
 {
     class Program
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public static string[] MenuItems =
             {
             "\t Invalid input. Try again:\n \t Please make your choice...",
@@ -47,10 +50,10 @@ namespace ConsoleApp
                     case 1: //Show ALL Groups
 
                         int index = 0;
-                        Console.WriteLine($"{new string('-', 4)}ID{new string('-', 35)}Name{new string('-', 3)}Price{new string('-', 3)}ExpirationDays{new string('-', 2)}DateAddGoods{new string('-', 5)}LimitExpirationDate");
+                        Console.WriteLine($"{new string('-', 4)}ID{new string('-', 35)}Name{new string('-', 3)}Price{new string('-', 3)}ShelLife{new string('-', 2)}Produced{new string('-', 7)}BestBefore");
                         foreach (Goods spw in GoodsLogic.GetGoods)
                         {
-                            Console.WriteLine($"[{index++}] {spw.Id} {spw.Name}\t{spw.Price}\t{spw.ExpirationCountDays}\t\t{spw.DateAddGoodsToStorePlace.ToString("dd-MM-yyyy")}\t {GoodsLogic.CalcLimitExpirationDate(spw.ExpirationCountDays, spw.DateAddGoodsToStorePlace).ToString("dd-MM-yyyy")}");
+                            Console.WriteLine($"[{index++}] {spw.Id} {spw.Name}\t{spw.Price}\t{spw.ExpirationCountDays}\t{spw.DateAddGoodsToStorePlace.ToString("dd-MM-yyyy")}\t {GoodsLogic.CalcLimitExpirationDate(spw.ExpirationCountDays, spw.DateAddGoodsToStorePlace).ToString("dd-MM-yyyy")}");
                         }
 
                         ShowMenuInConsole();

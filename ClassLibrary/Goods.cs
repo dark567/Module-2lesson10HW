@@ -24,9 +24,9 @@ namespace ClassLibrary
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="_name"></param>
-        /// <param name="_price"></param>
-        /// <param name="_expirationDate"></param>
+        /// <param name="_name">name goods</param>
+        /// <param name="_price">price goods</param>
+        /// <param name="_expirationDate">count days Expiration</param>
         public Goods(string _name, double _price, int _expirationCountDays)
         {
             this.Id = Guid.NewGuid();
