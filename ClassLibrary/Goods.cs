@@ -33,7 +33,7 @@ namespace ClassLibrary
             this.Name = _name;
             this.Price = _price;
             this.ExpirationCountDays = _expirationCountDays;
-            this.DateAddGoodsToStorePlace = DateTime.Now.Date;
+            this.DateAddGoodsToStorePlace = DateTime.Now.Date;  // если я не ошибаюсь то можно просто this.DateAddGoodsToStorePlace = DateTime.Now и лучше делать так ты потом можешь что тебе надо выдрать из своего проперти
         }
 
     }
