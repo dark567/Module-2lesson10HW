@@ -9,7 +9,7 @@ namespace ClassLibrary
     public class StorePlace
     {
         public decimal Volume { get; set; }
-        public StorePlace()
+        public StorePlace()  // можешь не объявлять пустой конструктор у тебя и так всегда будет он вызыватся по умолчанию
         {
 
         }
