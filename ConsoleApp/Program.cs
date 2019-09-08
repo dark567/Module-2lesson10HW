@@ -25,7 +25,7 @@ namespace ConsoleApp
 
         static void Main(string[] args)
         {
-            bool MQuit = false;
+            bool MQuit = false;   // локальные переменные с маленькой буквы 
             int ChoiceNomMenu = 0;
 
             //first filling
