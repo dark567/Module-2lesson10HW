@@ -15,7 +15,8 @@ namespace ClassLibrary
         {
             get
             {
-                return Goods._modelGoods.ToArray();
+                return Goods._modelGoods.ToArray(); // Серега, реально не понимаю почему List<Goods>  надо конвертировать в Array . 
+                // https://stackoverflow.com/questions/1147497/c-sharp-listt-toarray-performance-is-bad
             }
         }
 
